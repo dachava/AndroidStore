@@ -9,20 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TiendaVirtual">
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".Principal"
+            android:exported="false"
+            android:label="@string/title_activity_principal"
+            android:theme="@style/Theme.TiendaVirtual.NoActionBar" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.TiendaVirtual.NoActionBar"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/Theme.TiendaVirtual.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
