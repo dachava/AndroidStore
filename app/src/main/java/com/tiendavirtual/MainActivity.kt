@@ -11,11 +11,11 @@ import com.google.firebase.ktx.Firebase
 import com.tiendavirtual.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    /*private lateinit var auth: FirebaseAuth
-    private lateinit var binding: ActivityMainBinding*/
+    private lateinit var auth: FirebaseAuth
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        /*binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         FirebaseApp.initializeApp(this)
         auth = Firebase.auth
@@ -31,7 +31,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         private fun haceLogin() {
-            TODO("Not yet implemented")
+            val email = binding.etEmail.text.toString()
+            val clave = binding.etClave.text.toString()
+
+            auth.signInWithEmailAndPassword(email,clave)
+                .addOnCompleteListener(this){ task ->}
+            if(task,isSuccessful){
+                Log.d("Autenticando", "Logeado")
+                val user = auth.currentUser
+                actualiza(user)
+            }else{
+                Log.d("Creando usuario", "Fallo")
+                Toast.makeText(baseContext,"Fallo",Toast.LENGTH_LONG).show()
+                actualiza(null)
+            }
         }
     }
 
@@ -48,8 +61,12 @@ class MainActivity : AppCompatActivity() {
         }else{
             Log.d("Creando usuario", "Fallo")
             Toast.makeText(baseContext,"Fallo",Toast.LENGTH_LONG).show()
-            actualiza(user)
-        }*/
+            actualiza(null)
         }
-    }
+        }
+
+fun actualiza(user: Any): Any {
+
+}
+}
 
