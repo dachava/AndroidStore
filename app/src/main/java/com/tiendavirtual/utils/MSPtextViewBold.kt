@@ -11,7 +11,7 @@ class MSPtextViewBold(context: Context, attrs: AttributeSet) : AppCompatTextView
     }
     private fun applyFront(){
         val typeface: Typeface =
-            Typeface.createFromAsset(context.assets,"Game Charger Regular.ttf")
+            Typeface.createFromAsset(context.assets,"Game Changer Regular.ttf")
         setTypeface(typeface)
     }
 }
