@@ -3,13 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_producto">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.tiendavirtual.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_producto"
+        android:name="com.tiendavirtual.ui.producto.ProductoFragment"
+        android:label="@string/menu_producto"
+        tools:layout="@layout/fragment_producto" >
+        <action
+            android:id="@+id/action_nav_producto_to_addProductoFragment"
+            app:destination="@id/addProductoFragment" />
+        <action
+            android:id="@+id/action_nav_producto_to_updateProductoFragment"
+            app:destination="@id/updateProductoFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +29,28 @@
         android:name="com.tiendavirtual.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/addProductoFragment"
+        android:name="com.tiendavirtual.ui.producto.AddProductoFragment"
+        android:label="fragment_add_producto"
+        tools:layout="@layout/fragment_add_producto" >
+        <action
+            android:id="@+id/action_addProductoFragment_to_nav_producto"
+            app:destination="@id/nav_producto" />
+        <action
+            android:id="@+id/action_addProductoFragment_to_updateProductoFragment"
+            app:destination="@id/updateProductoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProductoFragment"
+        android:name="com.tiendavirtual.ui.producto.UpdateProductoFragment"
+        android:label="fragment_update_producto"
+        tools:layout="@layout/fragment_update_producto" >
+        <action
+            android:id="@+id/action_updateProductoFragment_to_nav_producto"
+            app:destination="@id/nav_producto" />
+        <argument
+            android:name="producto"
+            app:argType="com.tiendavirtual.model.Producto" />
+    </fragment>
 </navigation>

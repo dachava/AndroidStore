@@ -10,7 +10,28 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_producto">Productos</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="msg_nombre">Nombre Producto</string>
+    <string name="msg_descripcion">Desc. del Producto</string>
+    <string name="msg_precio">Precio</string>
+    <string name="msg_cantidad">Cantidad</string>
+    <string name="msg_imagen">Imagen</string>
+    <string name="bt_addProducto">Agregar Producto</string>
+    <string name="bt_updateProducto">Actualizar Producto</string>
+    <string name="msg_producto_added">Producto agregado</string>
+    <string name="msg_data">Faltan datos</string>
+    <string name="msg_producto_update">Producto actualizado!!</string>
+    <string name="delete">Eliminar Producto</string>
+    <string name="seguroBorrar">"¿Está seguro de eliminar el producto seleccionado? "</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="success_save">Se guardo la imagen en Firebase con exito!!</string>
+    <string name="fail_save">No se pudo guardar la imagen con exito</string>
+    <string name="msg_prod_added">Producto agregado</string>
+
 </resources>
