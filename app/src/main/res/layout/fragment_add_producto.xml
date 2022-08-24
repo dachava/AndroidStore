@@ -73,20 +73,6 @@
                 android:textAlignment="center"
                 android:visibility="gone" />
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="25sp"
-                android:padding="10sp"
-                android:stretchColumns="*">
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-            </TableLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

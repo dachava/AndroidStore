@@ -73,6 +73,21 @@ class UpdateProductoFragment : Fragment() {
         }
     }
 
+    private fun deleteLugar() {
+        val pantalla=AlertDialog.Builder(requireContext())
+
+        pantalla.setTitle(R.string.delete)
+        pantalla.setMessage(getString(R.string.seguroBorrar)+" ${args.producto.nombre}?")
+
+        pantalla.setPositiveButton(getString(R.string.si)) { _,_ ->
+            productoViewModel.deleteProducto(args.producto)
+            findNavController().navigate(R.id.action_updateProductoFragment_to_nav_producto)
+        }
+
+        pantalla.setNegativeButton(getString(R.string.no)) { _,_ -> }
+        pantalla.create().show()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
