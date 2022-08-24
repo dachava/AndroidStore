@@ -45,6 +45,7 @@ class UpdateProductoFragment : Fragment() {
         binding.imagePreview.setImageURI(Uri.parse(args.producto.imagen))
 
         binding.btUpdateProducto.setOnClickListener { updateProducto() }
+        binding.btDeleteProducto.setOnClickListener { deleteProducto() }
 
 
         //Se indica que esta pantalla tiene un menu personalizado...
@@ -73,7 +74,7 @@ class UpdateProductoFragment : Fragment() {
         }
     }
 
-    private fun deleteLugar() {
+    private fun deleteProducto() {
         val pantalla=AlertDialog.Builder(requireContext())
 
         pantalla.setTitle(R.string.delete)

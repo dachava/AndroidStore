@@ -23,6 +23,7 @@
     <string name="msg_imagen">Imagen</string>
     <string name="bt_addProducto">Agregar Producto</string>
     <string name="bt_updateProducto">Actualizar Producto</string>
+    <string name="bt_deleteProducto">Borrar Producto</string>
     <string name="msg_producto_added">Producto agregado</string>
     <string name="msg_data">Faltan datos</string>
     <string name="msg_producto_update">Producto actualizado!!</string>
