@@ -62,7 +62,7 @@ class UpdateProductoFragment : Fragment() {
 
         //val imageUri = binding.image_preview
 
-        if (nombre.isNotEmpty()) { //Si puedo crear un lugar
+        if (nombre.isNotEmpty()) {
             val producto= Producto(args.producto.id,nombre,descripcion,precio,cantidad,"")
 
             productoViewModel.saveProducto(producto)
@@ -88,6 +88,8 @@ class UpdateProductoFragment : Fragment() {
         pantalla.setNegativeButton(getString(R.string.no)) { _,_ -> }
         pantalla.create().show()
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()

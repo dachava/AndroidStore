@@ -41,10 +41,10 @@ class ProductoDao {
     }
     fun saveProducto(producto: Producto) {
         val documento: DocumentReference
-        if (producto.id.isEmpty()) {  //Si id no tiene valor entonces es un documento nuevo
+        if (producto.id.isEmpty()) {
             documento = firestore.collection(coleccion1).document(usuario).collection(coleccion2).document()
             producto.id = documento.id
-        } else {  //si el id tiene valor... entonces el documento existe... y recupero la info de él
+        } else {
             documento = firestore.collection(coleccion1).document(usuario)
                 .collection(coleccion2).document(producto.id)
         }
@@ -54,7 +54,7 @@ class ProductoDao {
     }
 
     fun deleteProducto(producto: Producto) {
-        if (producto.id.isNotEmpty()) {  //Si el id tiene valor... entonces podemos eliminar el lugar... porque existe...
+        if (producto.id.isNotEmpty()) {
             firestore.collection(coleccion1).document(usuario)
                 .collection(coleccion2).document(producto.id).delete()
                 .addOnSuccessListener { Log.d("deleteProducto","Se elimintó un producto") }

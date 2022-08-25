@@ -9,7 +9,7 @@ import com.tiendavirtual.model.Producto
 import com.tiendavirtual.ui.producto.ProductoFragmentDirections
 
 class ProductoAdapter : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>(){
-    //una lista para gestionar la información de los lugares
+    //una lista para gestionar la información de los productos
     private var lista = emptyList<Producto>()
 
     inner class ProductoViewHolder(private val itemBinding: ProductoFilaBinding)
@@ -27,7 +27,7 @@ class ProductoAdapter : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>
         }
     }
 
-    //Acá se va a crear una "cajita" del reciclador...  una fila... sólo la estructura
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoViewHolder {
         val itemBinding =
             ProductoFilaBinding.inflate(LayoutInflater.from(parent.context),
@@ -35,7 +35,7 @@ class ProductoAdapter : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>
         return ProductoViewHolder(itemBinding)
     }
 
-    //Acá se va a solicitar "dibujar" una cajita, según el elemento de la lista...
+
     override fun onBindViewHolder(holder: ProductoViewHolder, position: Int) {
         val producto = lista[position]
         holder.dibuja(producto)
